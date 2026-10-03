@@ -1,3 +1,5 @@
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#167d9b">
 <title>StrengthLab Clientes</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -352,6 +354,80 @@
     .stat .value { font-size: 22px; }
     header .bar { gap: 10px; }
   }
+
+/* Mobile workspace */
+@media (max-width: 700px) {
+  body { font-size: 15px; }
+  .wrap { padding: 0 16px 110px; }
+  header .bar { padding: 12px 16px; gap: 10px; }
+  .brand { width: 100%; }
+  .brand .name { font-size: 26px; }
+  .brand .tag { display: block; font-size: 10px; }
+  .actions { width: 100%; gap: 7px; flex-wrap: nowrap; }
+  button { min-height: 46px; justify-content: center; border-radius: 12px; }
+  button.icon { min-width: 46px; }
+  #addBtn { flex: 1; }
+  .tabs { position: fixed; top: auto; bottom: 0; left: 0; right: 0; z-index: 40; padding-bottom: env(safe-area-inset-bottom); border-top: 1px solid var(--line); border-bottom: 0; background: var(--surface); box-shadow: 0 -4px 24px #0000000a; }
+  .tabs-inner { width: 100%; padding: 5px 8px; gap: 4px; }
+  .tabs button { flex: 1; min-width: 0; flex-direction: column; gap: 3px; font-size: 11px; padding: 7px 2px; min-height: 62px; border: 0; border-radius: 12px; }
+  .tabs button svg { width: 22px; height: 22px; }
+  .tabs button[aria-selected="true"] { background: var(--accent-soft); color: var(--accent); }
+  .tab { padding-top: 20px; }
+  .stats { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+  .stat { padding: 16px 12px; border-radius: 16px; }
+  .stat .label { font-size: 10px; letter-spacing: .04em; }
+  .stat .value { font-size: clamp(18px,5.3vw,25px); overflow-wrap: anywhere; }
+  .stat .sub { font-size: 11px; }
+  .card { border-radius: 18px; overflow: hidden; }
+  .card-head h2 { font-size: 17px; letter-spacing: .03em; }
+  .linechart { overflow-x: auto; -webkit-overflow-scrolling: touch; padding: 12px; }
+  .linechart svg { min-width: 650px; }
+  .legend { gap: 14px; }
+  .toolbar { gap: 12px; }
+  .search { flex-basis: 100%; }
+  .search input, select, .field input, .field textarea, .field select { font-size: 16px; min-height: 48px; }
+  .chips { width: 100%; padding: 4px; border-radius: 14px; }
+  .chips button { flex: 1; min-height: 42px; }
+  .togglelbl { font-size: 13px; flex-wrap: wrap; }
+  input[type="checkbox"] { width: 20px; height: 20px; accent-color: var(--accent); }
+  .scroll { overflow: visible; }
+  #clientsScroll table, #expTable { display: block; min-width: 0; }
+  #clientsScroll thead, #expTable thead { display: none; }
+  #clientsScroll tbody, #expTable tbody { display: block; padding: 12px; }
+  #clientsScroll tr.main, #expTable tbody tr { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; padding: 16px; margin-bottom: 12px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
+  #clientsScroll td, #expTable td { display: block; padding: 0; border: 0; text-align: left; white-space: normal; overflow-wrap: anywhere; min-width: 0; }
+  #clientsScroll tr.main td:first-child, #expTable tbody td:first-child { grid-column: 1 / -1; }
+  #clientsScroll .who .n { font-size: 18px; }
+  td[data-label]::before { content: attr(data-label); display: block; color: var(--faint); font-family: var(--sans); font-size: 11px; margin-bottom: 4px; }
+  #clientsScroll tr.main td:first-child::before, #expTable tbody td:first-child::before { display: none; }
+  #clientsScroll tr.detail { display: block; margin: -8px 0 16px; border-radius: 12px; }
+  .facts { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px 12px; }
+  .detail-inner { padding: 16px; }
+  .detail-btns button { flex: 1; }
+  tfoot { display: block; padding: 16px; border-top: 1px solid var(--line); }
+  tfoot tr { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  tfoot td:empty { display: none !important; }
+  .grow { flex-wrap: wrap; gap: 8px; padding: 16px; }
+  .grow .gn { order: -1; flex-basis: 100%; font-size: 18px; }
+  .grow .gd { margin-left: auto; }
+  .goalbar-head { align-items: flex-start; gap: 12px; }
+  .goalbar-head > span { width: 100%; }
+  .goalbar-head button { min-height: 40px; }
+  .mrow { padding: 20px 16px; }
+  .mrow-top .mm { font-size: 19px; }
+  .track { height: 16px; margin-top: 12px; }
+  .mrow-foot { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 12px; margin-top: 12px; }
+  .empty { padding: 32px 20px; }
+  .empty .row { flex-direction: column; }
+  dialog { width: 100%; max-width: 100%; max-height: 92dvh; margin: auto 0 0; border-radius: 24px 24px 0 0; padding-bottom: env(safe-area-inset-bottom); }
+  .dlg-body { padding: 24px 20px; }
+  .dlg-foot { position: sticky; bottom: 0; background: var(--surface); padding: 12px 0 0; }
+  .dlg-foot button { flex: 1; }
+  .two { grid-template-columns: 1fr; }
+  footer { padding: 0 4px; }
+  #toast { bottom: calc(90px + env(safe-area-inset-bottom)); }
+}
+
 </style>
 
 <header>
@@ -392,10 +468,10 @@
 
 <nav class="tabs">
   <div class="tabs-inner" id="tabs" role="tablist">
-    <button data-tab="resumen" role="tab" aria-selected="true">Resumen</button>
-    <button data-tab="clientes" role="tab" aria-selected="false">Clientes</button>
-    <button data-tab="ingresos" role="tab" aria-selected="false">Ingresos mes a mes</button>
-    <button data-tab="gastos" role="tab" aria-selected="false">Gastos</button>
+    <button data-tab="resumen" role="tab" aria-selected="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10l9-7 9 7v10H3z M9 20v-7h6v7"/></svg><span>Resumen</span></button>
+    <button data-tab="clientes" role="tab" aria-selected="false"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2 M13 7a4 4 0 1 1-8 0a4 4 0 0 1 8 0 M17 4a4 4 0 0 1 0 8"/></svg><span>Clientes</span></button>
+    <button data-tab="ingresos" role="tab" aria-selected="false"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18 M6 15l5-5 4 3 6-8"/></svg><span>Ingresos</span></button>
+    <button data-tab="gastos" role="tab" aria-selected="false"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18v14H3z M3 10h18 M7 15h4"/></svg><span>Gastos</span></button>
   </div>
 </nav>
 
@@ -1642,5 +1718,21 @@
   document.getElementById("groupBy").checked = false;
   setTab(currentTab);
   render();
+})();
+</script>
+
+<script>
+(function(){
+function labelCards(){
+ document.querySelectorAll('#clientsScroll table, #expTable').forEach(function(table){
+ var labels=Array.from(table.querySelectorAll('thead th')).map(function(th){return th.textContent.replace(/[▲▼]/g,'').trim();});
+ table.querySelectorAll('tbody tr:not(.detail)').forEach(function(row){
+ Array.from(row.children).forEach(function(td,i){if(td.colSpan===1 && labels[i])td.setAttribute('data-label',labels[i]);});
+ });
+});
+}
+labelCards();
+['clientsScroll','expTable'].forEach(function(id){new MutationObserver(labelCards).observe(document.getElementById(id),{childList:true,subtree:true});});
+document.getElementById('tabs').addEventListener('click',function(e){if(e.target.closest('button'))window.scrollTo({top:0,behavior:'instant'});});
 })();
 </script>
